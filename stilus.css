@@ -1,0 +1,126 @@
+/* 1.	Minden elem box-sizing méretét állítsd be border-box-ra!
+2.	A betűcsalád legyen Arial, Verdana, sans-serif!
+3.	A betűszín beige, a betűméret 10pt, a külső és a belső margó 0px. 
+4.	A háttérkép legyen a minta szerint.  */
+
+*{
+    box-sizing: border-box;
+    font-family: Arial, Verdana, sans-serif;
+    color: beige;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('kepek/black.png');
+}
+
+/* 6.	A main elem szélességét állítsd 90%-ra.
+7.	A main elem ne lehessen nagyobb, mint 900px.
+8.	Állítsd a teljes tartalmat a böngésző közepére!
+9.	A main elem háttérszíne legyen RGB kóddal megadva! */
+
+main{
+    width: 90%;
+    max-height: 900px;
+    align-items: center;
+    background-color: rgb(114, 111, 111);
+    margin: auto;
+}
+
+/* 10.	A header elembe állíts be a háttérképet!
+11.	A header magassága legyen 300px;
+12.	A háttér méretezését állítsd cover-re: background-size:cover; */
+
+header{
+    background-image: url('kepek/game.jpg');
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* 13.	Készítsd el a navigációt a mintának megfelelően.
+14.	A navigáció li elemei előtt ne legyen felsorolásjel!
+15.	Ha a navigáció li eleme fölé viszem az egeret, a háttérszín változzon narancssárga színűre!
+16.	A navigáció linkjei legyenek vastag betűsek.  */
+
+nav{
+    background-color: rgb(83, 81, 81);
+}
+
+nav a{
+    font-weight: bold;
+}
+
+nav ul{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: fit-content;
+}
+
+nav ul li{
+    text-decoration: none;
+    list-style-type: none;
+    padding: 16px;
+}
+
+nav ul li:hover{
+    background-color: orange;
+}
+
+/* 17.	Az article elemen belül a bekezdések legyenek sorkizárt igazításúak. 
+18.	Az article elemben a bekezdések betű mérete legyen 10px!
+19.	Az article elemben a cím betű mérete legyen 15px!
+20.	Az article elemen belül a kép ússzon el a szöveg mellé jobbra. 
+21.	A felsorolások előtti jel legyen square (négyzet).  */
+
+article{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+}
+
+article img{
+    width: 100%;
+    padding-top: 62px;
+}
+
+article p{
+    text-align: justify;
+    font-size: 16px;
+    padding-block: 16px;
+    padding-right: 16px;
+}
+
+article h1{
+    font-size: 15px;
+    padding-block: 16px;
+}
+
+article ul{
+    padding-left: 20px;
+}
+
+article ul li{
+    list-style-type: square;
+}
+
+footer{
+    background-color: yellow;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    color: black;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    article{
+        grid-template-columns: 1fr;
+    }
+
+    main{
+        max-height: 100%;
+    }
+}
